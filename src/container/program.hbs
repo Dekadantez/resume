@@ -1,0 +1,145 @@
+<div>
+    {{#with program}}
+    <main>
+        <section>
+            <div>
+                <h1>Program</h1>
+                <h2>Excursion</h2>
+                <em><b>{{excursion.name}}</b></em>
+                <p>
+                    {{excursion.location.city}},
+                    {{excursion.location.country}}
+                </p>
+                <p>Date: {{excursion.date}}</p>
+            </div>
+        </section>
+        <hr>
+        <br>
+        {{/with}}
+        <section>
+            <div>
+                <div>
+                    {{#with program.excursion}}
+                    {{> title data="Culture program"}}
+                    {{#with program.[0]}}
+                    <p><b>Name:</b> {{name}}</p>
+                    <p><b>Type:</b> {{type}}</p>
+                    <p><b>Duration:</b> {{duration}}</p>
+                </div>
+                <div>
+                    <details>
+                        {{#with details.museum}}
+                        <br>
+                        <p><b><cite>{{name}}</cite></b></p>
+                        <br>
+                        {{#with location}}
+                        <em><b>- Location:</b></em>
+                        <ul>
+                            <ol>
+                                <address>
+                                    <p><b>Address:</b> {{address}}</p>
+                                    <p><b>City: </b> {{city}}</p>
+                                    <p><b>Country: </b> {{country}}</p>
+                                </address>
+                            </ol>
+                        </ul>
+                        {{/with}}
+                        <em><b>- Exhibits:</b></em>
+                        {{#each exhibits}}
+                        <ul>
+                            <ol>
+                                <p><b>Name:</b> {{name}},</p>
+                                {{#if artist}}
+                                <p><b>Artist:</b> {{artist}},</p>
+                                {{else}}
+                                {{/if}}
+                                <p><b>Description:</b> {{description}},</p>
+                                <p><b>Audio guide:</b> {{audio_guide}}</p>
+                            </ol>
+                            <br>
+                        </ul>
+                        {{/each}}
+
+                        {{/with}}
+                        <em><b>- Guide:</b></em>
+                        {{#with details.guide}}
+                        <ul>
+                            <ol>
+                                <p><b>Name:</b> {{name}},</p>
+                                <p><b>Language:</b> {{language}},</p>
+                                <p><b>Rating:</b> {{rating}}</p>
+                            </ol>
+                        </ul>
+                        {{/with}}
+                    </details>
+
+                    {{/with}}
+                </div>
+
+                <br>
+
+                <div>
+                    {{> title data="Cultural show"}}
+                    {{#with program.[1]}}
+                    <p><b>Name:</b> {{name}}</p>
+                    <p><b>Type:</b> {{type}}</p>
+                    <p><b>Duration:</b> {{duration}}</p>
+
+                    <div>
+                        <details>
+                            {{#with details.venue}}
+                            <br>
+                            <p><b><cite>{{name}}</cite></b></p>
+                            <br>
+
+                            {{#with location}}
+                            <br>
+                            <em><b>- Location:</b></em>
+                            <ul>
+                                <ol>
+                                    <address>
+                                        <p><b>Address:</b> {{address}}</p>
+                                        <p><b>City: </b> {{city}}</p>
+                                        <p><b>Country: </b> {{country}}</p>
+                                    </address>
+                                </ol>
+                            </ul>
+
+                            {{/with}}
+
+                            {{/with}}
+                            <div>
+                                <br>
+                                <em><b>- Performers:</b></em>
+                                {{#each details.performers}}
+                                <ul>
+                                    <ol>
+                                        <p><b>Name:</b> {{name}},</p>
+                                        <p><b>Type:</b> {{type}},</p>
+                                    </ol>
+                                    <br>
+                                </ul>
+                                {{/each}}
+                            </div>
+                            <div>
+                                <em><b>- Guide:</b></em>
+                                <br>
+                                {{#with details.guide}}
+                                <ul>
+                                    <ol>
+                                        <p><b>Name:</b> {{name}},</p>
+                                        <p><b>Language:</b> {{language}},</p>
+                                        <p><b>Rating:</b> {{rating}}</p>
+                                    </ol>
+                                </ul>
+                                {{/with}}
+                            </div>
+                        </details>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+        </section>
+    </main>
+</div>
