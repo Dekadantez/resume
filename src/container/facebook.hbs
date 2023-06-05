@@ -1,0 +1,30 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <h1>{{name}}</h1>
+                <br>
+                <p> <button type="button" class="btn btn-primary btn-lg col-3">Enter</button>
+                    <button type="button" class="btn btn-secondary btn-lg col-3">Registration</button>
+                </p>
+                <hr>
+            </div>
+            <br>
+            <div>
+                {{> title data="Users:"}}
+                <ul>
+                    <br>
+                    <br>
+                    {{#with users.[0]}}
+                    {{> facebook}}
+                    {{/with}}
+
+                    <br>
+                    {{#with users.[1]}}
+                    {{> facebook}}
+                    {{/with}}
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
