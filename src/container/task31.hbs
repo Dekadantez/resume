@@ -72,31 +72,37 @@
             {{#with table}}
             <section>
                 <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            {{#each head}}
-                            <th>
-                                {{this}}
-                            </th>
-                            {{/each}}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            {{#each user}}
-                        <tr>
-                            {{#each this}}
-                            <td>{{this}}</td>
-                            {{/each}}
-                        </tr>
-                        {{/each}}
-                        </tr>
-                    </tbody>
+                    <div class="row">
+                        <div>
+                            <thead>
+                                <tr>
+                                    {{#each head}}
+                                    <th>
+                                        {{this}}
+                                    </th>
+                                    {{/each}}
+                                </tr>
+                            </thead>
+                        </div>
+                        <div>
+                            <tbody>
+                                <tr>
+                                    {{#each user}}
+                                <tr>
+                                    {{#each this}}
+                                    <td>{{this}}</td>
+                                    {{/each}}
+                                </tr>
+                                {{/each}}
+                                </tr>
+                            </tbody>
+                        </div>
                 </table>
-            </section>
-            {{/with}}
-            {{/with}}
         </div>
+    </section>
+    {{/with}}
+    {{/with}}
+    </div>
     </section>
     <hr>
 
