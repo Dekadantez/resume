@@ -1,0 +1,93 @@
+<div class="mb-3">
+    {{#with features.exterior}}
+    <ol><b>Exterior:</b></ol>
+    <ul>
+        <ol><b>- Wheels:</b></ol>
+    </ul>
+    <ul>
+        {{#with wheels}}
+        <ul>
+            <ol>size: {{size}}</ol>
+            <ol>type: {{type}}</ol>
+            <ol>color: {{color}}</ol>
+        </ul>
+        {{/with}}
+    </ul>
+    <ul>
+        <ol><b>- Headlights:</b></ol>
+    </ul>
+    <ul>
+        {{#with headlights}}
+        <ul>
+            <ol>type: {{type}}</ol>
+            <ol>brightness: {{brightness}}</ol>
+            <ol>automatic: {{automatic}}</ol>
+        </ul>
+        {{/with}}
+    </ul>
+    <ul>
+        <ol><b>- Sunroof:</b></ol>
+    </ul>
+    <ul>
+        {{#with sunroof}}
+        <ul>
+            <ol>type: {{type}}</ol>
+            <ol>size: {{size}}</ol>
+            <ol>automatic: {{automatic}}</ol>
+        </ul>
+        {{/with}}
+    </ul>
+    {{/with}}
+    <ol><b>- Engine:</b></ol>
+
+    {{#with engine}}
+    <ul>
+        <ol>type: {{type}}</ol>
+        <ol>displacement: {{displacement}}</ol>
+        <ol>horsepower: {{horsepower}}</ol>
+        <ol>transmission:
+            {{#with transmission}}
+            <ul>
+                <ol>type: {{type}}</ol>
+                <ol>gears: {{gears}}</ol>
+            </ul>
+            {{/with}}
+            {{/with}}
+    </ul>
+
+    <ol><b>- Fuel economy:</b></ol>
+
+    {{#with fuel_economy}}
+    <ul>
+        <ol>city: {{city}}</ol>
+        <ol>highway: {{highway}}</ol>
+        <ol>combined: {{combined}}</ol>
+    </ul>
+    {{/with}}
+
+    <ol><b>- Price:</b></ol>
+
+    {{#with price}}
+    <ul>
+        <ol>base: {{base}}</ol>
+        <ol>destination: {{destination}}</ol>
+        <ol>options:
+    </ul>
+    <ul>
+        {{#with options}}
+        <ul>
+            <ol>navigation: {{navigation}}</ol>
+            <ol>moonroof: {{moonroof}}</ol>
+            <ol>premium paint: {{premium_paint}}</ol>
+        </ul>
+        {{/with}}
+    </ul>
+    <hr>
+    <b>
+        <p>TOTAL: {{total}}</p>
+    </b>
+    <p><button type="button" class="btn btn-primary col-3">Buy</button>
+        <button type="button" class="btn btn-success col-3">To learn more </button>
+    </p>
+    {{/with}}
+</div>

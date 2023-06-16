@@ -1,0 +1,18 @@
+<section class="row">
+    {{#each footer}}
+    <div class="nav col-2">
+        <div class="flex column">
+            {{#each this}}
+            <div class="nav-item">
+                {{#if @last}}
+                <a href="link" class="nav-link disabled">{{text}}</a>
+                {{else}}
+                <a href="link" class="nav-link">{{text}}</a>
+                {{/if}}
+            </div>
+
+            {{/each}}
+        </div>
+    </div>
+    {{/each}}
+</section>

@@ -19,10 +19,10 @@
         <section>
             <div>
                 {{#with header}}
-                <h1 class="card-title col-3">{{title}}</h1>
-                <div class="col-4 row gx-3">{{description}}</div>
+                <h1 class="card-title col-3 mb-3">{{title}}</h1>
+                <div class="col-4 row mb-4 ms-1">{{description}}</div>
                 {{#with button}}
-                <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+                <a href="{{href}}" class="btn btn-primary mb-2">{{text}}</a>
                 {{/with}}
                 {{/with}}
             </div>
@@ -43,11 +43,11 @@
 
                 <div class="card">
                     {{#with picture}}
-                    <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+                    <img class="card-img-top mb-3" src="{{src}}" alt="{{alt}}">
                     {{/with}}
                     <div class="card-body">
-                        <h5 class="card-title">{{title}}</h5>
-                        <div>{{description}}</div>
+                        <h5 class="card-title mb-3">{{title}}</h5>
+                        <div class="mb-3">{{description}}</div>
                         {{#with button}}
                         <a href='{{href}}' class="btn btn-primary">{{text}}</a>
                         {{/with}}

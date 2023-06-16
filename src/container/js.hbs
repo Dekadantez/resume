@@ -1,102 +1,104 @@
-<div>
-    <div>
-        <section>
-            <ul>
-                <h1>{{name}}</h1>
-                <br>
-                <b>
-                    <p>Description:
-                </b> {{description}}</p>
+<section>
+    <ul>
+        <div class="mb-5">
+            <h1>{{name}}</h1>
+        </div>
+
+        <b>
+            <p>Description:
+        </b>{{description}}</p>
+
+
+        <div class="mb-3">
+            {{#with history}}
+
+            <p><b>Year:</b> {{year}}</p>
+            <p><b>Founder:</b> {{founder}}</p>
+            {{/with}}
+        </div>
+        <hr>
+        <div class="ms-3">
+            <div class="mb-3">
+                <p><b>Types:</b></p>
+                {{#each types}}
+
+                <li>{{this}}</li>
+
+                {{/each}}
+            </div>
+
+            <div class="mb-3">
+                {{#with syntax}}
+                <p><b>Syntax:</b></p>
+
+                <li>
+                    Variables: {{variables}}
+                </li>
+
+
+                <li>
+                    Functions: {{functions}}
+                </li>
+                <li>
+                    Conditionals: {{variables}}
+                </li>
+                <li>
+                    Loops: {{loops}}
+                </li>
+                <li>
+                    Classes: {{classes}}
+                </li>
+                {{/with}}
+            </div>
+
+            <div class="mb-3">
+                <p><b>Features:</b></p>
+                {{#each features}}
+
+                <li>
+                    {{this}}
+                </li>
+
+                {{/each}}
+            </div>
+
+            <div class="mb-3">
+                <p><b>Libraries:</b></p>
+                {{#each libraries}}
+
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </div>
+
+            <div class="mb-3">
+                <p><b>Tools:</b></p>
+                {{#each tools}}
+
+                <li>
+                    {{this}}
+                </li>
+                {{/each}}
+            </div>
+        </div>
+
+        <hr>
+        <div class="mb-3">
+            {{> title data="Community"}}
+            <br>
+            <div class="row">
+                {{#each community}}
 
                 <div>
-                    {{#with history}}
-
-                    <p><b>Year:</b> {{year}}</p>
-                    <p><b>Founder:</b> {{founder}}</p>
-                    {{/with}}
-                </div>
-                <hr>
-                <div>
-                    <p><b>Types:</b></p>
-                    {{#each types}}
-
-                    <li>{{this}}</li>
-
-                    {{/each}}
-                </div>
-                <br>
-                <div>
-                    {{#with syntax}}
-                    <p><b>Syntax:</b></p>
-
-                    <li>
-                        Variables: {{variables}}
-                    </li>
-
-
-                    <li>
-                        Functions: {{functions}}
-                    </li>
-                    <li>
-                        Conditionals: {{variables}}
-                    </li>
-                    <li>
-                        Loops: {{loops}}
-                    </li>
-                    <li>
-                        Classes: {{classes}}
-                    </li>
-                    {{/with}}
-                </div>
-                <br>
-                <div>
-                    <p><b>Features:</b></p>
-                    {{#each features}}
-
-                    <li>
-                        {{this}}
-                    </li>
-
-                    {{/each}}
-                </div>
-                <br>
-                <div>
-                    <p><b>Libraries:</b></p>
-                    {{#each libraries}}
-
-                    <li>
-                        {{this}}
-                    </li>
-                    {{/each}}
-                </div>
-                <br>
-                <div>
-                    <p><b>Tools:</b></p>
-                    {{#each tools}}
-
-                    <li>
-                        {{this}}
-                    </li>
-                    {{/each}}
-                </div>
-                <br>
-                <hr>
-                <div>
-                    {{> title data="Community"}}
-                    <br>
-                    {{#each community}}
-
                     <p>
-                        <button type="button" class="btn btn-success col-3" width="300">{{name}}</button>
-
+                        <button type="button" class="btn btn-success col-3 me-4" width="300">{{name}}</button>
                         <b>Name:</b> {{name}}
                         <b>Type:</b> {{type}}
                     </p>
-                    <br>
-                    <br>
-                    {{/each}}
                 </div>
-            </ul>
-        </section>
-    </div>
-</div>
+                {{/each}}
+            </div>
+        </div>
+    </ul>
+</section>

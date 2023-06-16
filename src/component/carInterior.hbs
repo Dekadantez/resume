@@ -1,0 +1,57 @@
+<div class="mb-5">
+    <p><b>Features:</b></p>
+    {{#with features.interior}}
+    <ol><b>Interior:</b></ol>
+
+    <ul>
+        <ol><b>- Seats:</b></ol>
+    </ul>
+
+    <ul>
+        {{#with seats}}
+        <ul>
+            <ol>material: {{material}}</ol>
+            <ol>color: {{color}}</ol>
+            <ol>heated: {{heated}}</ol>
+            <ol>ventilated: {{ventilated}}</ol>
+        </ul>
+        {{/with}}
+    </ul>
+    <ul>
+        <ol><b>- Dashboard:</b></ol>
+    </ul>
+    <ul>
+        {{#with dashboard}}
+        <ul>
+            <ol>material: {{material}}</ol>
+            <ol>color: {{color}}</ol>
+            <ol>display:
+                {{#with display}}
+                <ul>
+                    <ol>type: {{type}}</ol>
+                    <ol>size: {{size}}</ol>
+                    <ol>resolution: {{resolution}}</ol>
+                    <ol>touchscreen: {{touchscreen}}</ol>
+                </ul>
+                {{/with}}
+            </ol>
+        </ul>
+        {{/with}}
+    </ul>
+    <ul>
+        <ol><b>- Audio:</b></ol>
+    </ul>
+
+    <ul>
+        {{#with audio}}
+        <ul>
+            <ol>system: {{system}}</ol>
+            <ol>speakers: {{speakers}}</ol>
+            <ol>subwoofer: {{subwoofer}}</ol>
+            <ol>bluetooth: {{bluetooth}}</ol>
+            <ol><abbr>USB</abbr>: {{USB}}</ol>
+        </ul>
+        {{/with}}
+    </ul>
+    {{/with}}
+</div>

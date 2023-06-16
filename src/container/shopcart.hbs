@@ -1,18 +1,6 @@
 <main>
-    <section class="row">
-        {{#with navigation}}
-        <div class="nav nav-tabs">
-            {{#each links}}
-            <div class="flex-column">
-                <div class="nav-item">
-                    <a href="{{href}}" class="nav-link">{{text}}</a>
-                </div>
-            </div>
-            {{/each}}
-            <a href="{{href}}" class="nav-link disabled">Disabled</a>
-        </div>
-        {{/with}}
-        <hr>
+    <section>
+        {{> shopNav}}
     </section>
     <section>
         <div>
@@ -103,26 +91,7 @@
         {{/with}}
     </section>
     <hr>
-    <section class="row">
-        {{#each footer}}
-        <div class="nav col-2">
-            <div class="flex column">
-                {{#each this}}
-                <div class="nav-item">
-                    {{#if @last}}
-                    <a href="link" class="nav-link disabled">{{text}}</a>
-                    {{else}}
-                    <a href="link" class="nav-link">{{text}}</a>
-                    {{/if}}
-                </div>
-
-                {{/each}}
-            </div>
-        </div>
-        {{/each}}
-    </section>
-
-
+    {{> shopFooter}}
 
 
 

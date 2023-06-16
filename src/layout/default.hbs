@@ -20,7 +20,7 @@
 <body>
 	{{#with header}}
 	<header>
-		<div>
+		<div class="mb-3">
 			<h1>{{name.firstname}} {{name.lastname}}</h1>
 		</div>
 		<div>
@@ -31,9 +31,11 @@
 			<em>{{salary}}</em>
 		</div>
 		<br>
-		{{#each address}}
-		<address><em>{{this}}</em></address>
-		{{/each}}
+		{{#with address}}
+		<div>
+			<address><em>{{country}},{{town}},{{street}}{{number}}</em></address>
+		</div>
+		{{/with}}
 		<br>
 		<hr>
 	</header>

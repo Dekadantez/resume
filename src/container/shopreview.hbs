@@ -1,20 +1,6 @@
 <main>
-    <section>
-        <div class="card">
-            {{#with navigation}}
-            <div class="nav">
-                {{#each links}}
-                <div class="nav-item">
-                    <a href="{{href}}" class="btn btn-link">{{text}}</a>
-                </div>
-                {{/each}}
-                <div class="nav-item">
-                    <a href="{{href}}" class="btn btn-link disabled">Disabled</a>
-                </div>
-            </div>
-            {{/with}}
-        </div>
-    </section>
+    {{> shopNav}}
+
     <section class="row">
         {{#with formBlock}}
         <div class="col-8">
@@ -144,22 +130,6 @@
             {{/with}}
         </div>
     </section>
-    <section class="row mt-3">
-        {{#each footer}}
-        <div class="nav col-2">
-            <div class="flex-column">
-                {{#each this}}
-                <div class="nav-item">
-                    {{#if @last}}
-                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
-                    {{else}}
-                    <a href="{{link}}" class="nav-link">{{text}}</a>
-                    {{/if}}
-                </div>
-                {{/each}}
-            </div>
-        </div>
-        {{/each}}
 
-    </section>
+    {{> shopFooter}}
 </main>

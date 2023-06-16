@@ -1,27 +1,26 @@
-<div>
+<main>
+    {{#with web}}
     <div>
-        {{#with web}}
-        <main>
-            <section>
-                {{> title data="WEB"}}
-                <hr>
-                <br>
+        <section>
+            <div class="mb-3">{{> title data="WEB"}}</div>
+            <hr>
+            <div class="mb-3">
                 <b><em>LANGUAGE:</em></b>
+            </div>
+            <ul>
+                {{#each languages}}
+                <li><b>Name: <mark><abbr>{{name}}</abbr></mark></b></li>
+                <p><b>Version:</b> {{version}}</p>
+                <p><b>Description:</b> {{description}}</p>
                 <br>
-                <br>
-                <ul>
-                    {{#each languages}}
-                    <li><b>Name: <mark><abbr>{{name}}</abbr></mark></b></li>
-                    <p><b>Version:</b> {{version}}</p>
-                    <p><b>Description:</b> {{description}}</p>
-                    <br>
+                <div class="mb-3">
                     <ul>
 
                         {{#each elements}}
                         <ol><b>Elements:</b></ol>
                         <ol>Name: <b>{{name}}</b></ol>
                         <ol>Description: {{description}}</ol>
-                        <br>
+
                         <ul>
                             {{#each attributes}}
                             <ol><b>Attributes:</b></ol>
@@ -30,7 +29,7 @@
                             <ol>Description: {{description}}</ol>
                             <br>
                             {{/each}}
-                            <br>
+
                         </ul>
                         {{/each}}
                         <div>
@@ -71,14 +70,10 @@
                             {{/each}}
                         </div>
                     </ul>
-                    <br>
-                    <br>
-                    {{/each}}
-                </ul>
-
-            </section>
-        </main>
-        {{/with}}
-
+                </div>
+                {{/each}}
+            </ul>
+        </section>
     </div>
-</div>
+    {{/with}}
+</main>

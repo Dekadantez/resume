@@ -1,22 +1,5 @@
 <main>
-    <section>
-        {{#with navigation}}
-        <div class="card">
-            <div class="nav">
-                {{#each links}}
-                <div class="nav-item">
-
-                    {{#if @last}}
-                    <a href="href" class="btn btn-link nav-link disabled">{{text}}</a>
-                    {{else}}
-                    <a href="href" class="btn btn-link nav-link">{{text}}</a>
-                    {{/if}}
-                </div>
-                {{/each}}
-            </div>
-        </div>
-        {{/with}}
-    </section>
+    {{> shopNav}}
     <section>
         <div>
             <p class="display-5">{{header}}</p>
@@ -357,24 +340,5 @@
         <hr>
     </section>
 
-    <section class="row">
-        {{#each footer}}
-        <div class="nav col-2">
-            <div class="flex-column">
-                {{#each this}}
-                <div class="nav-item">
-                    {{#if @last}}
-                    <a href="{{link}}" class="nav-link disabled">{{text}}</a>
-                    {{else}}
-                    <a href="{{link}}" class="nav-link">{{text}}</a>
-                    {{/if}}
-
-                </div>
-                {{/each}}
-            </div>
-        </div>
-
-        {{/each}}
-
-    </section>
+    {{> shopFooter}}
 </main>
