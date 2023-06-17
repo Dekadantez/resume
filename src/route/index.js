@@ -45,7 +45,111 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+    title: 'Список сторінок',
+    description: `Реве да стогне Днiпр широкий,
+    Сердитий вiтер завива,
+    Додолу верби гне високi,
+    Горами хвилю пiдiйма.
+    
+    I блiдий мiсяць на ту пору,
+    Iз хмари де-де виглядав,
+    Неначе човен в синiм морi
+    То виринав, то потопав.
+    
+    Ще третi пiвнi не спiвали,
+    Нiхто нiде не гомонiв,
+    Сичi в гаю перекликались,
+    Та ясен раз-у-раз скрипiв.`,
+
+    pages: [
+      {
+        url: '/bio',
+        name: 'bio',
+      },
+      {
+        url: '/car',
+        name: 'car',
+      },
+      {
+        url: '/education',
+        name: 'education',
+      },
+      {
+        url: '/facebook',
+        name: 'facebook',
+      },
+      {
+        url: '/js',
+        name: 'js',
+      },
+      {
+        url: '/mac',
+        name: 'mac',
+      },
+      {
+        url: '/person',
+        name: 'person',
+      },
+      {
+        url: '/program',
+        name: 'program',
+      },
+      {
+        url: '/skills',
+        name: 'skills',
+      },
+      {
+        url: '/summary',
+        name: 'summary',
+      },
+      {
+        url: '/task21',
+        name: 'task21',
+      },
+      {
+        url: '/task22',
+        name: 'task22',
+      },
+      {
+        url: '/task31',
+        name: 'task31',
+      },
+      {
+        url: '/web',
+        name: 'web',
+      },
+      {
+        url: '/work',
+        name: 'work',
+      },
+      {
+        url: '/shopcart',
+        name: 'shopcart',
+      },
+      {
+        url: '/shopcatalog',
+        name: 'shopcatalog',
+      },
+      {
+        url: '/shophome',
+        name: 'shophome',
+      },
+      {
+        url: '/shoporder',
+        name: 'shoporder',
+      },
+      {
+        url: '/shopprofile',
+        name: 'shopprofile',
+      },
+      {
+        url: '/shopreview',
+        name: 'shopreview',
+      },
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
